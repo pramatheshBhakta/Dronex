@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dronex</string>
+    <string name="default_web_client_id">AIzaSyDmD8CTF_MbmKsm5PIqwaUGHTn-l72wZVU</string>
+
 </resources>

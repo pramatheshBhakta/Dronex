@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1090631055091",
+    "project_id": "dronex-3cba6",
+    "storage_bucket": "dronex-3cba6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090631055091:android:2a45acd85a51f1bd94a986",
+        "android_client_info": {
+          "package_name": "com.example.dronexx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090631055091-a1gvgob34okr41q1p1r63jq6va8j3v40.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBboyshaMYHpj-LgN--GQ6fKb4Ti3o3bnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090631055091-a1gvgob34okr41q1p1r63jq6va8j3v40.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
