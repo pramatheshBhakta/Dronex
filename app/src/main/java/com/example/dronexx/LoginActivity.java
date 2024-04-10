@@ -174,6 +174,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                         if (task.isSuccessful()) {
                             // Login successful
                             Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                            Intent it = new Intent(LoginActivity.this, mapView.class);
+                            startActivity(it);
                             // Redirect to main activity or any other page
                         } else {
                             // Login failed
