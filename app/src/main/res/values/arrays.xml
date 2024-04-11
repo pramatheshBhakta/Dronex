@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ride_types">
+        <item>Customized</item>
+        <item>Predefined</item>
+    </string-array>
+    <string-array name="places_options">
+        <item>Admission Block</item>
+        <item>Chapel</item>
+        <item>Student Square</item>
+        <item>AB3</item>
+    </string-array>
+</resources>
+

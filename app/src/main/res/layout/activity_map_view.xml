@@ -21,20 +21,26 @@
             app:navigationIcon="@drawable/ic_menu_foreground"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-        <!-- Search Bar -->
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/toolbar"
-            android:queryHint="Enter The Destination" />
-
         <!-- MapView -->
         <com.google.android.gms.maps.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/search_view" />
+            android:layout_height="0dp"
+            android:layout_above="@+id/startNowButton"
+            android:layout_below="@id/toolbar" />
+
+        <!-- Start Now Button -->
+        <Button
+            android:id="@+id/startNowButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Now"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
