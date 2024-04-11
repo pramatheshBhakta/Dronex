@@ -83,10 +83,13 @@ public class mapView extends AppCompatActivity implements OnMapReadyCallback {
                 startActivity(new Intent(getApplicationContext(), AboutActivity.class));
             } else if (id == R.id.nav_support) {
                 // Open support activity
-                startActivity(new Intent(getApplicationContext(), SupportActivity.class));
+                startActivity(new Intent(getApplicationContext(), multimediaIntercation.class));
             } else if (id == R.id.nav_schedule) {
                 // Open schedule activity
                 startActivity(new Intent(getApplicationContext(), scheduleDronex.class));
+            }else if (id == R.id.nav_feedback) {
+                // Open schedule activity
+                startActivity(new Intent(getApplicationContext(), feedback.class));
             }
 
             // Close the drawer

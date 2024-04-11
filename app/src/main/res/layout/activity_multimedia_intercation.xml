@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -11,59 +12,96 @@
         android:layout_height="match_parent">
 
         <!-- DRONEX Title -->
+
+        <!-- Toolbar -->
+
         <TextView
             android:id="@+id/textViewDronex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="161dp"
+            android:layout_marginEnd="157dp"
             android:text="DRONEX"
             android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"/>
+            android:textStyle="bold" />
 
-        <!-- Toolbar -->
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:layout_below="@id/textViewDronex"
             android:background="?attr/colorPrimary"
+            android:gravity="center"
             android:theme="?attr/actionBarTheme"
             app:navigationIcon="@drawable/ic_menu_foreground"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            android:layout_below="@id/textViewDronex"
-            android:gravity="center"/>
+            app:title="MULTIMEDIA" />
 
         <!-- Multimedia Console -->
-        <FrameLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/multimedia_console"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="436dp"
             android:layout_below="@id/toolbar"
-            android:padding="16dp"
             android:layout_centerInParent="true">
 
             <!-- Video View (or Image View) -->
-            <ImageView
-                android:id="@+id/multimedia_view"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop" />
 
             <!-- Text Box for Captions or Instructions -->
-            <EditText
-                android:id="@+id/caption_text"
-                android:layout_width="match_parent"
+
+            <ImageView
+                android:id="@+id/multimedia_view"
+                android:layout_width="387dp"
+                android:layout_height="158dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/chapel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.269"
+                tools:layout_editor_absoluteX="12dp" />
+
+            <TextView
+                android:id="@+id/caption_text1"
+                android:layout_width="303dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginTop="16dp"
+                android:background="@android:color/transparent"
                 android:hint="Enter caption or instructions"
                 android:inputType="textMultiLine"
                 android:maxLines="3"
+                android:text="CHAPEL"
+                android:textColor="@android:color/black"
+                android:textSize="24dp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.148"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.082" />
+
+            <TextView
+                android:id="@+id/caption_text"
+                android:layout_width="368dp"
+                android:layout_height="146dp"
                 android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:scrollbars="vertical"
+                android:text="@string/aboutChapel"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
-                android:layout_below="@id/multimedia_view" />
-        </FrameLayout>
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.944"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="266dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RelativeLayout>
 
