@@ -2,14 +2,20 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_item_1"
-            android:title="Item 1" />
+            android:id="@+id/nav_profile"
+            android:title="@string/profile" />
         <item
-            android:id="@+id/nav_item_2"
-            android:title="Item 2" />
+            android:id="@+id/nav_about"
+            android:title="@string/about" />
         <item
-            android:id="@+id/nav_item_3"
-            android:title="Item 3" />
+            android:id="@+id/nav_support"
+            android:title="@string/support" />
+        <item
+            android:id="@+id/nav_schedule"
+            android:title="@string/schedule" />
     </group>
 
 </menu>
+
+
+

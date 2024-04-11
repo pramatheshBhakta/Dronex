@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Material3.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".feedback"
+            android:exported="false" />
+        <activity
+            android:name=".multimediaIntercation"
+            android:exported="false" />
+        <activity
             android:name=".scheduleDronex"
             android:exported="false" />
         <activity

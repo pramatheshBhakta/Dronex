@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- DRONEX Title -->
+        <TextView
+            android:id="@+id/textViewDronex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DRONEX"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"/>
+
+        <!-- Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/ic_menu_foreground"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_below="@id/textViewDronex"
+            android:gravity="center"/>
+
+        <!-- Multimedia Console -->
+        <FrameLayout
+            android:id="@+id/multimedia_console"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:padding="16dp"
+            android:layout_centerInParent="true">
+
+            <!-- Video View (or Image View) -->
+            <ImageView
+                android:id="@+id/multimedia_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Text Box for Captions or Instructions -->
+            <EditText
+                android:id="@+id/caption_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="16dp"
+                android:hint="Enter caption or instructions"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_below="@id/multimedia_view" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <!-- Side Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -2,17 +2,22 @@ package com.example.dronexx;
 
 import static android.content.ContentValues.TAG;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -26,6 +31,7 @@ import com.google.android.libraries.places.api.model.Place;
 import com.google.android.libraries.places.api.model.PlaceLikelihood;
 import com.google.android.libraries.places.api.net.FindCurrentPlaceRequest;
 import com.google.android.libraries.places.api.net.PlacesClient;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.Arrays;
 import java.util.List;
@@ -36,6 +42,8 @@ public class mapView extends AppCompatActivity implements OnMapReadyCallback {
     private MapView mapView;
     private Toolbar toolbar;
     private Button startNowButton;
+    private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +53,47 @@ public class mapView extends AppCompatActivity implements OnMapReadyCallback {
         // Initialize Toolbar
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Initialize Drawer Layout and Navigation View
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.navigation_view);
+
+        // Set up the navigation drawer toggle
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        // Handle navigation item clicks
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                // Handle navigation view item clicks here
+                int id = item.getItemId();
+
+                // Handle each item's action accordingly
+                if (id == R.id.nav_profile) {
+                    // Open profile activity
+                    startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                } else if (id == R.id.nav_about) {
+                    // Open about activity
+                    startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                } else if (id == R.id.nav_support) {
+                    // Open support activity
+                    startActivity(new Intent(getApplicationContext(), SupportActivity.class));
+                } else if (id == R.id.nav_schedule) {
+                    // Open schedule activity
+                    startActivity(new Intent(getApplicationContext(), ScheduleActivity.class));
+                }
+
+
+
+                // Close the drawer
+                drawerLayout.closeDrawers();
+                return true;
+            }
+        });
 
         // Initialize MapView
         mapView = findViewById(R.id.mapView);
