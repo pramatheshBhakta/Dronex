@@ -60,7 +60,7 @@ public class multimediaIntercation extends AppCompatActivity {
                     startActivity(new Intent(getApplicationContext(), SupportActivity.class));
                 } else if (id == R.id.nav_schedule) {
                     // Open schedule activity
-                    startActivity(new Intent(getApplicationContext(), ScheduleActivity.class));
+                    startActivity(new Intent(getApplicationContext(), scheduleDronex.class));
                 }
 
                 // Close the drawer
