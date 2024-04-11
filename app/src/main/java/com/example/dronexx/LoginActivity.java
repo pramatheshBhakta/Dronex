@@ -197,10 +197,10 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String passkey = input.getText().toString().trim();
-                if (passkey.equals("123")) {
+                if (passkey.equals("JAIHIND")) {
                     // Admin login successful
 
-                    Intent it = new Intent(LoginActivity.this, mapView.class);
+                    Intent it = new Intent(LoginActivity.this, adminActivity.class);
                     startActivity(it);
                     Toast.makeText(LoginActivity.this, "Admin login successful!", Toast.LENGTH_SHORT).show();
                     // Redirect to admin activity or any other page
