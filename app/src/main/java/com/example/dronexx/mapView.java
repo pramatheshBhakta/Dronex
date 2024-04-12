@@ -77,10 +77,10 @@ public class mapView extends AppCompatActivity implements OnMapReadyCallback {
             // Handle each item's action accordingly
             if (id == R.id.nav_profile) {
                 // Open profile activity
-                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                startActivity(new Intent(getApplicationContext(), profile.class));
             } else if (id == R.id.nav_about) {
                 // Open about activity
-                startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+                startActivity(new Intent(getApplicationContext(), about.class));
             } else if (id == R.id.nav_support) {
                 // Open support activity
                 startActivity(new Intent(getApplicationContext(), multimediaIntercation.class));
