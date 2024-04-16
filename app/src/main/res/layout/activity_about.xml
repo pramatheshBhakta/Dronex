@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".about">
+
+    <!-- Caption heading: DRONEX -->
+    <TextView
+        android:id="@+id/captionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="DRONEX"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/aboutTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Text: About Us -->
+    <TextView
+        android:id="@+id/aboutTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="About Us"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/captionTextView" />
+
+    <!-- Profile Icon 1: NEALON -->
+    <!-- Name: NEALON -->
+
+    <!-- Profile Icon 2: OSHIN -->
+
+    <!-- Name: OSHIN -->
+
+    <!-- Profile Icon 3: PRAJWAL -->
+
+    <!-- Name: PRAJWAL -->
+
+    <!-- Profile Icon 4: PRAMATHESH -->
+
+    <ImageView
+        android:id="@+id/nealonIcon"
+        android:layout_width="183dp"
+        android:layout_height="168dp"
+        android:layout_marginStart="212dp"
+        android:src="@drawable/nealon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="NEALON"
+        app:layout_constraintEnd_toEndOf="@id/nealonIcon"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@id/nealonIcon"
+        app:layout_constraintTop_toBottomOf="@id/nealonIcon" />
+
+    <!-- Name: PRAMATHESH -->
+
+    <ImageView
+        android:id="@+id/oshinIcon"
+        android:layout_width="176dp"
+        android:layout_height="180dp"
+        android:src="@drawable/oshin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.902"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="OSHIN"
+        app:layout_constraintEnd_toEndOf="@id/oshinIcon"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@id/oshinIcon"
+        app:layout_constraintTop_toBottomOf="@id/oshinIcon" />
+
+    <ImageView
+        android:id="@+id/prajwalIcon"
+        android:layout_width="148dp"
+        android:layout_height="172dp"
+        android:src="@drawable/prajwal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="PRAJWAL"
+        app:layout_constraintEnd_toEndOf="@id/prajwalIcon"
+        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintStart_toStartOf="@id/prajwalIcon"
+        app:layout_constraintTop_toBottomOf="@id/prajwalIcon" />
+
+    <ImageView
+        android:id="@+id/pramatheshIcon"
+        android:layout_width="169dp"
+        android:layout_height="170dp"
+        android:src="@drawable/pramathesh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.262" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="PRAMATHESH"
+        app:layout_constraintEnd_toEndOf="@id/pramatheshIcon"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="@id/pramatheshIcon"
+        app:layout_constraintTop_toBottomOf="@id/pramatheshIcon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

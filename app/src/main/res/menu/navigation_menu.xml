@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_about"
+            android:title="@string/about" />
+        <item
+            android:id="@+id/nav_support"
+            android:title="@string/support" />
+        <item
+            android:id="@+id/nav_schedule"
+            android:title="@string/schedule" />
+        <item
+            android:id="@+id/nav_feedback"
+            android:title="@string/feedback" />
+    </group>
+
+</menu>
+
+
+

@@ -174,6 +174,8 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                         if (task.isSuccessful()) {
                             // Login successful
                             Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
+                            Intent it = new Intent(LoginActivity.this, mapView.class);
+                            startActivity(it);
                             // Redirect to main activity or any other page
                         } else {
                             // Login failed
@@ -197,6 +199,9 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                 String passkey = input.getText().toString().trim();
                 if (passkey.equals("JAIHIND")) {
                     // Admin login successful
+
+                    Intent it = new Intent(LoginActivity.this, adminActivity.class);
+                    startActivity(it);
                     Toast.makeText(LoginActivity.this, "Admin login successful!", Toast.LENGTH_SHORT).show();
                     // Redirect to admin activity or any other page
                 } else {

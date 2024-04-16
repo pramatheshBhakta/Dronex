@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         signUpButton = findViewById(R.id.signUpButton);
 
         // Set up the video view
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.bground1); // corrected typo
+        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.dronex); // corrected typo
         backgroundVideo.setVideoURI(videoUri);
         backgroundVideo.start();
         backgroundVideo.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {

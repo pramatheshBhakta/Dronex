@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="startTourButton" type="id"/>
+    <item name="nav_profile" type="id" />
+    <item name="nav_about" type="id" />
+    <item name="nav_support" type="id" />
+    <item name="nav_schedule" type="id" />
+    <item name="feedbackEditText" type="id" />
+    <item name="submitButton" type="id" />
+</resources>

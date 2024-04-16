@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Dronex</string>
-    <string name="default_web_client_id">AIzaSyDmD8CTF_MbmKsm5PIqwaUGHTn-l72wZVU</string>
-
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID_HERE</string>
+    <string name="places_api_key">AIzaSyDdI1l4BzaKigjIUdl5HZBsBsghfJJZXao</string>
+    <string name="select_location" />
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+    <string name="profile">Profile</string>
+    <string name="about">About</string>
+    <string name="support">Support</string>
+    <string name="schedule">Schedule</string>
+    <string name="submit">Submit</string>
+    <string name="feedback">FEEDBACK</string>
+    <string name="aboutChapel">"The college chapel stands as a beacon of faith and community on campus.It is a cherished landmark in the heart of the campus."</string>
 </resources>
