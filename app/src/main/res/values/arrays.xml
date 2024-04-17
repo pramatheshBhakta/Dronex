@@ -3,12 +3,22 @@
     <string-array name="ride_types">
         <item>Customized</item>
         <item>Predefined</item>
-    </string-array>
-    <string-array name="places_options">
-        <item>Admission Block</item>
-        <item>Chapel</item>
-        <item>Student Square</item>
-        <item>AB3</item>
-    </string-array>
+    </string-array><string-array name="places_options">
+    <item>TEST1</item>
+    <item>TEST2</item>
+    <item>CHAPEL</item>
+    <item>AB3</item>
+    <item>STUDENT_SQUARE_LIBRARY</item>
+    <item>AB2</item>
+    <item>CAFETERIA</item>
+    <item>THROWBALL_COURT</item>
+    <item>GROUND</item>
+    <item>PARKING</item>
+    <item>CANTEEN</item>
+    <item>ADMIN_BLOCK_ACADEMIC_BLOCK1</item>
+    <item>AMPHITHEATER</item>
+    <item>GATE</item>
+
+</string-array>
 </resources>
 

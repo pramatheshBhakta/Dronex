@@ -96,7 +96,7 @@ public class adminActivity extends AppCompatActivity {
         waypointButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showCoordinateInputDialog();
+                sendCommand("waypoint_mission");
             }
         });
     }
