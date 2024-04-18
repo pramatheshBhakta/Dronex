@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.play.services.maps)
     implementation(libs.places)
     implementation(libs.firebase.database)
+    implementation(libs.navigation.ui)
 
 
 

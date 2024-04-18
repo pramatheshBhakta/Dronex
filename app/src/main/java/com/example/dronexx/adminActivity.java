@@ -9,7 +9,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -88,6 +87,14 @@ public class adminActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sendCommand("alt_hold");
+            }
+        });
+
+        Button None= findViewById(R.id.noneButton);
+        None.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommand("None");
             }
         });
 

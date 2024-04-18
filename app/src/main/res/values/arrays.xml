@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="ride_types">
-        <item>Customized</item>
-        <item>Predefined</item>
-    </string-array><string-array name="places_options">
+
+    <string-array name="places_options">
     <item>TEST1</item>
     <item>TEST2</item>
     <item>CHAPEL</item>
@@ -17,8 +15,17 @@
     <item>CANTEEN</item>
     <item>ADMIN_BLOCK_ACADEMIC_BLOCK1</item>
     <item>AMPHITHEATER</item>
+
     <item>GATE</item>
 
 </string-array>
+    <string-array name="PREDEFINED">
+        <item name="TRIP1">AB2-AB3</item>
+        <item name="TRIP2">AB3-CAFETARIA</item>
+        <item name ="TRIP3">STUDENT SQUARE - ADMIN</item>
+        <item>TEST1-TEST2</item>
+
+
+    </string-array>
 </resources>
 

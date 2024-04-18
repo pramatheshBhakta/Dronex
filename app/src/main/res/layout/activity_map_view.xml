@@ -33,9 +33,11 @@
         <com.google.android.gms.maps.MapView
             android:id="@+id/mapView"
             android:layout_width="match_parent"
-            android:layout_height="780dp"
+            android:layout_height="match_parent"
             android:layout_above="@id/startNowButton"
-            android:layout_marginBottom="-64dp" />
+            android:layout_below="@+id/toolbar"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="7dp" />
 
         <Button
             android:id="@+id/startNowButton"
@@ -52,17 +54,14 @@
         <!-- Search View -->
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/startNowButton"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="96dp"
-            android:layout_marginEnd="12dp"
-            android:layout_marginBottom="552dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/search_view_background"
             android:queryHint="Search places..."
             app:iconifiedByDefault="false" />

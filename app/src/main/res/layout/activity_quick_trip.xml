@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -10,68 +9,92 @@
     tools:context=".quickTrip">
 
     <!-- QUICK TOUR Heading -->
+
+    <!-- Pickup Location Spinner -->
     <TextView
         android:id="@+id/quickTourHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
         android:text="QUICK TOUR"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Pickup Location Spinner -->
+    <!-- Destination Spinner -->
     <Spinner
         android:id="@+id/pickupLocationSpinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="16dp"
         android:background="@android:drawable/btn_dropdown"
-        android:padding="8dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/quickTourHeading"
         android:entries="@array/places_options"
-        android:prompt="@string/select_location"/>
+        android:padding="8dp"
+        android:prompt="@string/select_pickup"
+        android:spinnerMode="dropdown"
 
-    <!-- Destination Spinner -->
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/quickTourHeading" />
+
+    <!-- Ride Type Spinner -->
+
+
+    <!-- Custom Tour Options Spinner (Initially Hidden) -->
+
+    <!-- Predefined Tour CheckBox -->
+
+    <!-- Tour Now Button -->
     <Spinner
         android:id="@+id/destinationSpinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="76dp"
         android:layout_marginEnd="16dp"
         android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/places_options"
         android:padding="8dp"
+        android:prompt="@string/select_drop"
         android:spinnerMode="dropdown"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pickupLocationSpinner"
-        android:entries="@array/places_options"
-        android:prompt="@string/select_location"/>
+        app:layout_constraintTop_toBottomOf="@id/pickupLocationSpinner" />
 
-    <!-- Ride Type Spinner -->
     <Spinner
-        android:id="@+id/rideTypeSpinner"
+        android:id="@+id/customTourOptionsSpinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@android:drawable/btn_dropdown"
+        android:entries="@array/PREDEFINED"
         android:padding="8dp"
+        android:prompt="@string/select_location"
         android:spinnerMode="dropdown"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/destinationSpinner"/>
+        app:layout_constraintTop_toBottomOf="@id/quickTourHeading" />
 
-    <!-- Tour Now Button -->
+    <CheckBox
+        android:id="@+id/predefinedTourCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="264dp"
+        android:text="Want Predefined Tour ?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customTourOptionsSpinner" />
+
     <Button
         android:id="@+id/tourNowButton"
         android:layout_width="wrap_content"
@@ -92,7 +115,33 @@
         android:layout_margin="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="3dp"
+        android:text="FROM"
+        app:layout_constraintBottom_toTopOf="@+id/pickupLocationSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/quickTourHeading"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TO"
+        app:layout_constraintBottom_toTopOf="@+id/destinationSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pickupLocationSpinner"
+        app:layout_constraintVertical_bias="0.878" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

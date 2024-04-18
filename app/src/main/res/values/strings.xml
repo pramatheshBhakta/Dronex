@@ -12,4 +12,6 @@
     <string name="submit">Submit</string>
     <string name="feedback">FEEDBACK</string>
     <string name="aboutChapel">"The college chapel stands as a beacon of faith and community on campus.It is a cherished landmark in the heart of the campus."</string>
+    <string name="select_drop">WHERE DO YOU WANT TO GO?</string>
+    <string name="select_pickup">WHERE ARE YOU?</string>
 </resources>
