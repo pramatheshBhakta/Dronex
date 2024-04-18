@@ -35,7 +35,9 @@ android {
 dependencies {
 
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
-    //implementation 'com.google.firebase:firebase-auth:22.3.1'
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+
+    compileOnly("com.google.maps.android:android-maps-utils:0.5+")
 
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
@@ -49,6 +51,8 @@ dependencies {
     implementation(libs.places)
     implementation(libs.firebase.database)
     implementation(libs.navigation.ui)
+
+
 
 
 
