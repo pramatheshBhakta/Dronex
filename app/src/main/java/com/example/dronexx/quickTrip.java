@@ -23,10 +23,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class quickTrip extends AppCompatActivity {
-    private double pickupLatitude;
-    private double pickupLongitude;
-    private double destinationLatitude;
-    private double destinationLongitude;
     private Spinner pickupLocationSpinner;
     private Spinner destinationSpinner,customspinner;
     TextView txt1,txt2;
@@ -80,26 +76,14 @@ public class quickTrip extends AppCompatActivity {
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 // User clicked Yes button
-
                                 if (predefinedTourCheckBox.isChecked()) {
                                     fetchCoordinates();
                                 } else {
                                     fetchCoordinatesofcustom();
                                 }
-                                String coordinatesMessage = "Pickup Latitude: " + pickupLatitude + "\n"
-                                        + "Pickup Longitude: " + pickupLongitude + "\n"
-                                        + "Destination Latitude: " + destinationLatitude + "\n"
-                                        + "Destination Longitude: " + destinationLongitude;
-
-// Show toast with all coordinates
-                                Toast.makeText(quickTrip.this, coordinatesMessage, Toast.LENGTH_LONG).show();
+                                // Update command node in Firebase to "waypoints"
                                 updateCommandNode();
-
                                 Intent intent = new Intent(quickTrip.this, RouteMapActivity.class);
-                                intent.putExtra("pickupLatitude", pickupLatitude);
-                                intent.putExtra("pickupLongitude", pickupLongitude);
-                                intent.putExtra("destinationLatitude", destinationLatitude);
-                                intent.putExtra("destinationLongitude", destinationLongitude);
                                 startActivity(intent);
                             }
                         })
@@ -189,10 +173,6 @@ public class quickTrip extends AppCompatActivity {
                 } else {
                     Toast.makeText(quickTrip.this, "Error: Locations not found in the database", Toast.LENGTH_SHORT).show();
                 }
-                pickupLatitude = dataSnapshot.child(pickupLocation).child("latitude").getValue(Double.class);
-                pickupLongitude = dataSnapshot.child(pickupLocation).child("longitude").getValue(Double.class);
-                destinationLatitude = dataSnapshot.child(destination).child("latitude").getValue(Double.class);
-                destinationLongitude = dataSnapshot.child(destination).child("longitude").getValue(Double.class);
             }
 
             @Override
@@ -200,7 +180,6 @@ public class quickTrip extends AppCompatActivity {
                 Toast.makeText(quickTrip.this, "Failed to fetch locations: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     private void fetchCoordinatesofcustom() {
@@ -235,10 +214,6 @@ public class quickTrip extends AppCompatActivity {
                 } else {
                     Toast.makeText(quickTrip.this, "Error: Locations not found in the database", Toast.LENGTH_SHORT).show();
                 }
-                pickupLatitude = dataSnapshot.child(pickupLocation).child("latitude").getValue(Double.class);
-                pickupLongitude = dataSnapshot.child(pickupLocation).child("longitude").getValue(Double.class);
-                destinationLatitude = dataSnapshot.child(destination).child("latitude").getValue(Double.class);
-                destinationLongitude = dataSnapshot.child(destination).child("longitude").getValue(Double.class);
             }
 
             @Override
@@ -246,7 +221,6 @@ public class quickTrip extends AppCompatActivity {
                 Toast.makeText(quickTrip.this, "Failed to fetch locations: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
     private void updateCommandNode() {
         DatabaseReference commandRef = FirebaseDatabase.getInstance().getReference().child("commands");
