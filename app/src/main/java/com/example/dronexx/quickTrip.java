@@ -224,7 +224,7 @@ public class quickTrip extends AppCompatActivity {
     }
     private void updateCommandNode() {
         DatabaseReference commandRef = FirebaseDatabase.getInstance().getReference().child("commands");
-        commandRef.setValue("waypoints");
+        commandRef.setValue("waypoint_mission");
         Toast.makeText(quickTrip.this, "Initiating Drone in ETA:20s", Toast.LENGTH_SHORT).show();
     }
 

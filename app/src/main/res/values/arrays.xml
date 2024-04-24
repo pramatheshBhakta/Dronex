@@ -4,6 +4,10 @@
     <string-array name="places_options">
     <item>TEST1</item>
     <item>TEST2</item>
+    <item>TEST3</item>
+    <item>TEST4</item>
+    <item>TEST5</item>
+    <item>TEST6</item>
     <item>CHAPEL</item>
     <item>AB3</item>
     <item>STUDENT_SQUARE_LIBRARY</item>
