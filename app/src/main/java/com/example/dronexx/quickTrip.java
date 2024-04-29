@@ -24,23 +24,26 @@ import com.google.firebase.database.ValueEventListener;
 
 public class quickTrip extends AppCompatActivity {
     private Spinner pickupLocationSpinner;
-    private Spinner destinationSpinner,customspinner;
-    TextView txt1,txt2;
+    private Spinner destinationSpinner, customspinner;
+    TextView txt1, txt2;
 
     private ImageButton backButton;
 
     // Firebase
     private DatabaseReference locationsRef;
+    private DatabaseReference droneLocationRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quick_trip);
 
-        txt1= findViewById(R.id.txt3);
-        txt2= findViewById(R.id.txt2);
+        txt1 = findViewById(R.id.txt3);
+        txt2 = findViewById(R.id.txt2);
 
         // Firebase setup
         locationsRef = FirebaseDatabase.getInstance().getReference().child("locations");
+        droneLocationRef = FirebaseDatabase.getInstance().getReference().child("droneLocation");
 
         // Initialize views
         pickupLocationSpinner = findViewById(R.id.pickupLocationSpinner);
@@ -56,7 +59,6 @@ public class quickTrip extends AppCompatActivity {
         locationAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         pickupLocationSpinner.setAdapter(locationAdapter);
         destinationSpinner.setAdapter(locationAdapter);
-
 
         // Set onClickListener for the back button
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -92,7 +94,6 @@ public class quickTrip extends AppCompatActivity {
             }
         });
 
-
         // Set onCheckedChangeListener for the predefinedTourCheckBox
         predefinedTourCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -104,7 +105,6 @@ public class quickTrip extends AppCompatActivity {
                     destinationSpinner.setVisibility(View.GONE);
                     txt1.setVisibility(View.GONE);
                     txt2.setVisibility(View.GONE);
-
 
                 } else {
                     // Show pickupLocationSpinner and destinationSpinner and hide customTourOptionsSpinner

@@ -89,6 +89,13 @@ public class adminActivity extends AppCompatActivity {
                 sendCommand("alt_hold");
             }
         });
+        Button hardButton = findViewById(R.id.hardButton);
+        altHoldButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendCommand("hard");
+            }
+        });
 
         Button None= findViewById(R.id.noneButton);
         None.setOnClickListener(new View.OnClickListener() {
