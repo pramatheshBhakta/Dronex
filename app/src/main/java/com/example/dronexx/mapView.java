@@ -20,7 +20,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.cursoradapter.widget.SimpleCursorAdapter;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.ui.AppBarConfiguration;
+
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -81,9 +81,6 @@ public class mapView extends AppCompatActivity implements OnMapReadyCallback {
             } else if (id == R.id.nav_about) {
                 // Open about activity
                 startActivity(new Intent(getApplicationContext(), about.class));
-            } else if (id == R.id.nav_support) {
-                // Open support activity
-                startActivity(new Intent(getApplicationContext(), multimediaIntercation.class));
             } else if (id == R.id.nav_schedule) {
                 // Open schedule activity
                 startActivity(new Intent(getApplicationContext(), scheduleDronex.class));

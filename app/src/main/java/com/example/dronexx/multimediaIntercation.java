@@ -55,9 +55,7 @@ public class multimediaIntercation extends AppCompatActivity {
                 } else if (id == R.id.nav_about) {
                     // Open about activity
                     startActivity(new Intent(getApplicationContext(), about.class));
-                } else if (id == R.id.nav_support) {
-                    // Open support activity
-                    startActivity(new Intent(getApplicationContext(), SupportActivity.class));
+
                 } else if (id == R.id.nav_schedule) {
                     // Open schedule activity
                     startActivity(new Intent(getApplicationContext(), scheduleDronex.class));
